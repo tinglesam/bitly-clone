@@ -1,8 +1,48 @@
 <h1>LONG to SHORT URL Converter </h1>
 <p>Please enter a long URL </p>
 
-<form action="/urls" method="post">
- Enter URL: 
- <input type ="text" name="long_url">
- <input type="submit" value="Submit">
+<form action="/createurl" method="post">
+	 Enter URL: 
+	 <input type ="text" name="long_url">
+	 <input type="submit" value="Submit">
  </form>
+
+
+
+
+
+<!-- <head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+</style>
+</head>
+<body> -->
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>Long URL</th>		
+    <th>Short URL</th>
+  </tr>
+  <% Url.all.each do |x| %>
+
+
+  <tr>
+    <td><%= x.long_url%> </td>		
+    <td><%= x.short_url%> </td>
+  </tr>
+  <% end %>
+</table>
+
+
+
+
+
+

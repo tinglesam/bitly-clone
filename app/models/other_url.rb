@@ -20,6 +20,7 @@ class Url < ActiveRecord::Base
 	  	end
 	  	
 	  	short = "http://bit.ly/" + s.reverse
+	  	return short 
 
 	end
 
