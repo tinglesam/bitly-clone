@@ -13,9 +13,15 @@ post "/createurl" do
  	redirect '/'
 end
 
-# get'/:short_url' do 
+get'/:short_url' do 
+	url = Url.find_by short_url: params[:short_url]
 
-# end 
+	url.count
+	url.save
+	redirect url.long_url
 
-#convert and 
+
+end 
+
+
 

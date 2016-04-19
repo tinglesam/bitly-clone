@@ -11,7 +11,7 @@
 
 
 
-<!-- <head>
+<head>
 <style>
 table, th, td {
     border: 1px solid black;
@@ -22,7 +22,7 @@ th, td {
 }
 </style>
 </head>
-<body> -->
+<body>
 
 
 
@@ -30,6 +30,7 @@ th, td {
   <tr>
     <th>Long URL</th>		
     <th>Short URL</th>
+    <th>Clicks</th>
   </tr>
   <% Url.all.each do |x| %>
 
@@ -37,6 +38,7 @@ th, td {
   <tr>
     <td><%= x.long_url%> </td>		
     <td><%= x.short_url%> </td>
+    <td><%= x.click_count%> </td>
   </tr>
   <% end %>
 </table>
